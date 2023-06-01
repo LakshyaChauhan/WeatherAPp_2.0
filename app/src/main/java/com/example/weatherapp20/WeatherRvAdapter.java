@@ -22,6 +22,11 @@ public class WeatherRvAdapter extends RecyclerView.Adapter<WeatherRvAdapter.View
     private Context context;
     private ArrayList<WeatherRvModel> arrayList;
 
+    public WeatherRvAdapter(Context context, ArrayList<WeatherRvModel> arrayList) {
+        this.context = context;
+        this.arrayList = arrayList;
+    }
+
     @NonNull
     @Override
     public WeatherRvAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -32,7 +37,7 @@ public class WeatherRvAdapter extends RecyclerView.Adapter<WeatherRvAdapter.View
     @Override
     public void onBindViewHolder(@NonNull WeatherRvAdapter.ViewHolder holder, int position) {
         WeatherRvModel model = arrayList.get(position);
-        holder.temp.setText(model.getTemp()+" °C");
+            holder.temp.setText(model.getTemp()+" °C");
         Picasso.get().load("http:".concat(model.getIcon())).into(holder.img);
         holder.wind.setText(model.getWindSpeed()+"Km/h");
         SimpleDateFormat input = new SimpleDateFormat("yyyy-MM-dd hh:mm");

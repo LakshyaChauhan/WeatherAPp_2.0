@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/deltaRelative"
-        android:visibility="gone">
+        android:visibility="visible">
 
         <ImageView
             android:layout_width="match_parent"
@@ -37,7 +37,7 @@
             android:padding="10dp"
             android:id="@+id/TextCityname"
             android:layout_marginTop="30dp"
-            android:text="City Name"
+            android:text="@string/city_name"
             android:gravity="center"
             android:textColor="#FFFFFF"
             android:textSize="18sp">
@@ -58,18 +58,22 @@
                 android:layout_margin="10dp"
                 android:id="@+id/TILcityNAme"
                 android:background="@android:color/transparent"
+
+                app:boxStrokeColor="@android:color/transparent"
                 android:layout_weight="4.5"
-                android:hint="Enter City Name"
+                android:hint="@string/enter_city_name"
                 android:padding="05dp"
                 app:hintTextColor="#FFFFFF"
                 android:textColorHint="#FFFFFF">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
+
                     android:layout_height="match_parent"
                     android:id="@+id/TIEdtCityNAme"
                     android:textColor="#FFFFFF"
                     android:textSize="18sp"
+
                     android:background="@android:color/transparent"
                     android:importantForAutofill="no"
                     android:inputType="text">
@@ -107,14 +111,17 @@
             />
 
         <ImageView
+            android:id="@+id/IVicon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/IVicon"
-            android:src="@mipmap/ic_launcher"
             android:layout_below="@id/TVTemp"
             android:layout_centerHorizontal="true"
-            android:layout_margin="10dp"
-            android:padding="5dp"/>
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:padding="5dp"
+            android:src="@mipmap/ic_launcher" />
 
         <TextView
             android:layout_width="match_parent"
