@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    app:cardCornerRadius="10dp"
+    android:elevation="7dp"
+    android:background="@android:color/transparent"
+    android:layout_margin="5dp">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_shade">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/idTVTime"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:padding="4dp"
+            android:text= "Time"
+            android:textColor="#FFFFFF"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/idTVTemp"
+            android:layout_below="@+id/idTVTime"
+            android:gravity="center"
+            android:padding="4dp"
+            android:textAlignment="center"
+            android:text= "20"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"/>
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:id="@+id/IVCONDITION"
+            android:layout_below="@id/idTVTemp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_centerHorizontal="true"
+            android:padding="4dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvWINDSPEED"
+            android:layout_below="@+id/IVCONDITION"
+            android:gravity="center"
+            android:padding="4dp"
+            android:textAlignment="center"
+            android:text= "20"
+            android:layout_centerHorizontal="true"
+            android:textColor="#FFFFFF"/>
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
